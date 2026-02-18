@@ -1,73 +1,73 @@
-# ð Salat Times - Version SÃ©curisÃ©e
+# 🕌 Salat Times - Version Sécurisée
 
 **Version** : 1.0.0-secure  
-**Date** : 17 FÃ©vrier 2026  
-**Status** : â Production Ready  
+**Date** : 17 Février 2026  
+**Status** : ✅ Production Ready  
 
 ---
 
-## ð¯ Ã PROPOS
+## 🎯 À PROPOS
 
-Skill OpenClaw pour horaires de priÃ¨re islamique avec :
-- â 12 mÃ©thodes de calcul
-- â GÃ©olocalisation automatique
-- â Direction Qibla
-- â Notifications WhatsApp/Telegram
-- â Calendrier mensuel
-- â Multi-langue (AR/FR/EN)
-- â **SÃCURISÃ** contre injections et attaques
+Skill OpenClaw pour horaires de prière islamique avec :
+- ✅ 12 méthodes de calcul
+- ✅ Géolocalisation automatique
+- ✅ Direction Qibla
+- ✅ Notifications WhatsApp/Telegram
+- ✅ Calendrier mensuel
+- ✅ Multi-langue (AR/FR/EN)
+- ✅ **SÉCURISÉ** contre injections et attaques
 
 ---
 
-## ð SÃCURITÃ
+## 🔒 SÉCURITÉ
 
-Cette version inclut **TOUTES les corrections de sÃ©curitÃ©** identifiÃ©es lors de l'audit :
+Cette version inclut **TOUTES les corrections de sécurité** identifiées lors de l'audit :
 
-### â Corrections AppliquÃ©es
+### ✅ Corrections Appliquées
 
-1. **Command Injection** (CRITIQUE) â â CORRIGÃ
+1. **Command Injection** (CRITIQUE) → ✅ CORRIGÉ
    - Remplacement `exec()` par `execFile()`
    - Validation stricte de tous inputs
 
-2. **Input Validation** (HAUTE) â â CORRIGÃ
+2. **Input Validation** (HAUTE) → ✅ CORRIGÉ
    - Nouveau module `lib/sanitize.js`
    - Whitelist pour city, country, method, etc.
 
-3. **HTTP Security** (MOYENNE) â â CORRIGÃ
-   - Timeouts 10 secondes
-   - HTTPS obligatoire
-   - Validation certificats SSL
+3. **HTTP Security** (MOYENNE) → ✅ CORRIGÉ
+    - Timeouts 10 secondes
+    - HTTPS obligatoire
+    - Validation certificats SSL
 
-4. **Rate Limiting** (MOYENNE) â â CORRIGÃ
+4. **Rate Limiting** (MOYENNE) → ✅ CORRIGÉ
    - Cache local 24h
-   - PrÃ©vention abus API
+   - Prévention abus API
 
-5. **Error Handling** (MOYENNE) â â CORRIGÃ
+5. **Error Handling** (MOYENNE) → ✅ CORRIGÉ
    - Pas de leak d'informations sensibles
-   - Logs sÃ©curisÃ©s en production
+   - Logs sécurisés en production
 
-**Score SÃ©curitÃ©** : 9.0/10 â­â­â­â­â­
+**Score Sécurité** : 9.0/10 ⭐⭐⭐⭐⭐
 
-Voir [SECURITY-AUDIT.md](SECURITY-AUDIT.md) pour dÃ©tails complets.
+Voir [SECURITY-AUDIT.md](SECURITY-AUDIT.md) pour détails complets.
 
 ---
 
-## ð¦ INSTALLATION
+## 📦 INSTALLATION
 
-### MÃ©thode 1 : Automatique (RecommandÃ©e)
+### Méthode 1 : Automatique (Recommandée)
 
 ```bash
-# TÃ©lÃ©charger et exÃ©cuter le script d'installation
+# Télécharger et exécuter le script d'installation
 ./setup.sh
 ```
 
-### MÃ©thode 2 : Manuelle
+### Méthode 2 : Manuelle
 
 ```bash
 # 1. Copier dans OpenClaw
 cp -r salat-times-secure ~/.openclaw/skills/salat-times
 
-# 2. Installer dÃ©pendances
+# 2. Installer dépendances
 cd ~/.openclaw/skills/salat-times
 npm install
 
@@ -75,23 +75,23 @@ npm install
 ./salat-times.js --help
 ```
 
-Voir [README-INSTALL.md](README-INSTALL.md) pour guide dÃ©taillÃ©.
+Voir [README-INSTALL.md](README-INSTALL.md) pour guide détaillé.
 
 ---
 
-## ð USAGE RAPIDE
+## 🚀 USAGE RAPIDE
 
 ### Configuration Initiale
 
 ```bash
-# DÃ©finir localisation
+# Définir localisation
 ./salat-times.js config set location.city "Paris"
 ./salat-times.js config set location.country "France"
 
-# Choisir mÃ©thode
+# Choisir méthode
 ./salat-times.js config set method "UOIF"  # Pour France
 
-# DÃ©finir langue
+# Définir langue
 ./salat-times.js config set language "fr"
 ```
 
@@ -101,7 +101,7 @@ Voir [README-INSTALL.md](README-INSTALL.md) pour guide dÃ©taillÃ©.
 # Horaires aujourd'hui
 ./salat-times.js
 
-# Prochaine priÃ¨re
+# Prochaine prière
 ./salat-times.js --next
 
 # Direction Qibla
@@ -117,7 +117,7 @@ Voir [README-INSTALL.md](README-INSTALL.md) pour guide dÃ©taillÃ©.
 ### Notifications
 
 ```bash
-# Activer notifications WhatsApp (10 min avant chaque priÃ¨re)
+# Activer notifications WhatsApp (10 min avant chaque prière)
 ./salat-times.js --notify --channel whatsapp --to "+33612345678" --before 10
 
 # Installer cron job pour notifications quotidiennes
@@ -126,76 +126,76 @@ Voir [README-INSTALL.md](README-INSTALL.md) pour guide dÃ©taillÃ©.
 
 ---
 
-## ð DOCUMENTATION
+## 📖 DOCUMENTATION
 
-- **[SKILL.md](SKILL.md)** - Documentation complÃ¨te (5000+ mots)
-- **[README-INSTALL.md](README-INSTALL.md)** - Guide installation dÃ©taillÃ©
-- **[SECURITY-AUDIT.md](SECURITY-AUDIT.md)** - Audit sÃ©curitÃ© complet
-- **[CHANGES.md](CHANGES.md)** - Liste des corrections appliquÃ©es
+- **[SKILL.md](SKILL.md)** - Documentation complète (5000+ mots)
+- **[README-INSTALL.md](README-INSTALL.md)** - Guide installation détaillé
+- **[SECURITY-AUDIT.md](SECURITY-AUDIT.md)** - Audit sécurité complet
+- **[CHANGES.md](CHANGES.md)** - Liste des corrections appliquées
 
 ---
 
-## ð STRUCTURE
+## 📊 STRUCTURE
 
 ```
 salat-times-secure/
-âââ SKILL.md                    # Documentation complÃ¨te
-âââ README.md                   # Ce fichier
-âââ README-INSTALL.md           # Guide installation
-âââ SECURITY-AUDIT.md           # Audit sÃ©curitÃ©
-âââ CHANGES.md                  # Corrections appliquÃ©es
-âââ package.json                # DÃ©pendances (avec validator)
-âââ salat-times.js             # CLI principal
-âââ setup.sh                    # Script installation auto
-âââ lib/
-â   âââ api.js                 # API Aladhan (SÃCURISÃ)
-â   âââ config.js              # Configuration
-â   âââ formatter.js           # Formatage sorties
-â   âââ notify.js              # Notifications (SÃCURISÃ)
-â   âââ sanitize.js            # Validation inputs (NOUVEAU)
-âââ locales/
-    âââ ar.json                # Traductions arabe
-    âââ fr.json                # Traductions franÃ§ais
-    âââ en.json                # Traductions anglais
+├── SKILL.md                    # Documentation complète
+├── README.md                   # Ce fichier
+├── README-INSTALL.md           # Guide installation
+├── SECURITY-AUDIT.md           # Audit sécurité
+├── CHANGES.md                  # Corrections appliquées
+├── package.json                # Dépendances (avec validator)
+├── salat-times.js             # CLI principal
+├── setup.sh                    # Script installation auto
+├── lib/
+│   ├── api.js                 # API Aladhan (SÉCURISÉ)
+│   ├── config.js              # Configuration
+│   ├── formatter.js           # Formatage sorties
+│   ├── notify.js              # Notifications (SÉCURISÉ)
+│   └── sanitize.js            # Validation inputs (NOUVEAU)
+└── locales/
+    ├── ar.json                # Traductions arabe
+    ├── fr.json                # Traductions français
+    └── en.json                # Traductions anglais
 ```
 
 ---
 
-## ð§ DÃPENDANCES
+## 🔧 DÉPENDANCES
 
 ### Production
 
-- `axios` ^1.6.0 - RequÃªtes HTTP
+- `axios` ^1.6.0 - Requêtes HTTP
 - `moment-timezone` ^0.5.45 - Fuseaux horaires
 - `moment-hijri` ^2.1.2 - Calendrier hijri
 - `chalk` ^4.1.2 - Couleurs terminal
 - `commander` ^11.1.0 - CLI
 - `node-cache` ^5.1.2 - Cache local
-- `table` ^6.8.1 - Tableaux formatÃ©s
+- `table` ^6.8.1 - Tableaux formatés
 - `validator` ^13.11.0 - Validation inputs (**NOUVEAU**)
 
-### DÃ©veloppement
+### Développement
 
 - `eslint` ^8.55.0 - Linting
-- `eslint-plugin-security` ^2.1.0 - Audit sÃ©curitÃ© (**NOUVEAU**)
+- `eslint-plugin-security` ^2.1.0 - Audit sécurité (**NOUVEAU**)
 
 ---
 
-## â TESTS
+## ✅ TESTS
 
-### Tests SÃ©curitÃ©
+### Tests Sécurité
 
 ```bash
-# Audit dÃ©pendances
+# Audit dépendances
 npm audit
 
 # Scan code avec ESLint Security
 npm run lint
 
 # Tests fuzzing (inputs malicieux)
-./salat-times.js --city "Paris'; DROP TABLE;"     # Doit Ã©chouer
-./salat-times.js --city "../../../etc/passwd"     # Doit Ã©chouer
-./salat-times.js --city '$(whoami)'               # Doit Ã©chouer
+./salat-times.js --city "Paris'; DROP TABLE;"     # Doit échouer
+./salat-times.js --city "../../../etc/passwd"     # Doit échouer
+./salat-times.js --city '$(whoami)'               # Doit échouer
 ```
 
 ### Tests Fonctionnels
@@ -216,28 +216,28 @@ npm run lint
 
 ---
 
-## ð SUPPORT
+## 🆘 SUPPORT
 
-### ProblÃ¨mes Courants
+### Problèmes Courants
 
 **"Command not found: salat-times"**
 ```bash
 # Solution : Utiliser chemin complet
 ./salat-times.js
 
-# OU crÃ©er alias
+# OU créer alias
 echo 'alias salat="~/.openclaw/skills/salat-times/salat-times.js"' >> ~/.zshrc
 ```
 
 **"Module not found: validator"**
 ```bash
-# Solution : RÃ©installer dÃ©pendances
+# Solution : Réinstaller dépendances
 npm install
 ```
 
 **"Erreur API Aladhan"**
 ```bash
-# Solution : VÃ©rifier connexion Internet
+# Solution : Vérifier connexion Internet
 ping api.aladhan.com
 
 # Nettoyer cache
@@ -252,47 +252,47 @@ ping api.aladhan.com
 
 ---
 
-## ð LICENSE
+## 📄 LICENSE
 
 MIT License - Voir LICENSE file
 
 ---
 
-## ð¨âð» AUTEUR
+## 👨‍💻 AUTEUR
 
-CrÃ©Ã© par **MDI** pour la communautÃ© OpenClaw arabophone.
+Créé par arabclaw pour la communauté OpenClaw arabophone.
 
-GitHub : [@MDI](https://github.com/mdi)  
-Twitter : [@OpenclawFR](https://twitter.com/OpenclawFR)
+GitHub : @arabclaw  
+Twitter : @arabclaw
 
 ---
 
-## ð REMERCIEMENTS
+## 🙏 REMERCIEMENTS
 
 - **Aladhan API** : https://aladhan.com
 - **OpenClaw Team** : https://openclaw.com
-- **CommunautÃ© ArabClaw**
+- **Communauté ArabClaw**
 
 ---
 
-## ð SÃCURITÃ
+## 🔐 SÉCURITÉ
 
-Pour reporter une vulnÃ©rabilitÃ© de sÃ©curitÃ© :
+Pour reporter une vulnérabilité de sécurité :
 
-ð§ **Email** : [email protected]  
-ð **PGP Key** : [Lien vers clÃ© PGP]
+📧 **Email** : [email protected]  
+🔒 **PGP Key** : [Lien vers clé PGP]
 
-**NE PAS** crÃ©er d'issue publique pour failles de sÃ©curitÃ©.
+**NE PAS** créer d'issue publique pour failles de sécurité.
 
 ---
 
-## ð ROADMAP
+## 📈 ROADMAP
 
 ### v1.1.0 (Prochaine version)
 
 - [ ] Calendrier Hijri complet
 - [ ] Export .ics pour Google Calendar
-- [ ] Adhan audio (diffÃ©rents muezzins)
+- [ ] Adhan audio (différents muezzins)
 - [ ] Widget macOS pour barre menu
 - [ ] Mode offline (cache 1 an)
 - [ ] Tests unitaires complets
@@ -303,11 +303,11 @@ Pour reporter une vulnÃ©rabilitÃ© de sÃ©curitÃ© :
 - [ ] Application mobile (React Native)
 - [ ] Synchronisation cloud
 - [ ] Support Android Auto / CarPlay
-- [ ] IntÃ©gration Alexa/Google Home
+- [ ] Intégration Alexa/Google Home
 - [ ] API REST publique
 
 ---
 
-**ð Qu'Allah accepte vos priÃ¨res | ØªÙØ¨Ù Ø§ÙÙÙ ØµÙØ§ØªÙÙ**
+**🕌 Qu'Allah accepte vos prières | تقبل الله صلاتكم**
 
-**Version sÃ©curisÃ©e - Production Ready â**
+**Version sécurisée - Production Ready ✅**
