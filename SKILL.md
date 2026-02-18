@@ -1,11 +1,11 @@
 ---
 name: salat-times
-description: Horaires de prière précis avec géolocalisation, toutes méthodes de calcul, notifications et direction Qibla
+description: Horaires de priÃ¨re prÃ©cis avec gÃ©olocalisation, toutes mÃ©thodes de calcul, notifications et direction Qibla
 homepage: https://github.com/arabclaw/salat-times-secure
 version: 1.0.0
 metadata:
   openclaw:
-    emoji: "🕌"
+    emoji: "ð"
     tags: ["islamic", "prayer", "salat", "arabic", "muslim"]
     requires:
       bins: ["node"]
@@ -15,22 +15,22 @@ metadata:
         kind: node
         package: "axios moment-timezone moment-hijri"
         bins: []
-        label: "Installer dépendances (npm)"
+        label: "Installer dÃ©pendances (npm)"
 ---
 
-# 🕌 Salat Times - Horaires de Prière
+# ð Salat Times - Horaires de PriÃ¨re
 
-Le skill le plus complet pour les horaires de prière islamique avec géolocalisation automatique, toutes les méthodes de calcul, notifications intelligentes et direction Qibla.
+Le skill le plus complet pour les horaires de priÃ¨re islamique avec gÃ©olocalisation automatique, toutes les mÃ©thodes de calcul, notifications intelligentes et direction Qibla.
 
-## ✨ Fonctionnalités
+## â¨ FonctionnalitÃ©s
 
-### 🌍 Géolocalisation Automatique
-- Détection automatique de votre position
-- Support manuel par ville/pays/coordonnées
+### ð GÃ©olocalisation Automatique
+- DÃ©tection automatique de votre position
+- Support manuel par ville/pays/coordonnÃ©es
 - Cache de localisation
 
-### 📿 Méthodes de Calcul
-Support de **12 écoles juridiques** :
+### ð¿ MÃ©thodes de Calcul
+Support de **12 Ã©coles juridiques** :
 - Muslim World League (MWL)
 - Islamic Society of North America (ISNA)
 - Egyptian General Authority of Survey
@@ -43,51 +43,51 @@ Support de **12 écoles juridiques** :
 - Qatar
 - Majlis Ugama Islam Singapura, Singapore
 - Union Organization Islamic de France (UOIF)
-- Diyanet İşleri Başkanlığı, Turkey
+- Diyanet Ä°Åleri BaÅkanlÄ±ÄÄ±, Turkey
 - Spiritual Administration of Muslims of Russia
 
-### 🕐 Horaires Disponibles
-- **Fajr** (فجر) - Aube
-- **Sunrise** (شروق) - Lever du soleil
-- **Dhuhr** (ظهر) - Midi
-- **Asr** (عصر) - Après-midi
-- **Maghrib** (مغرب) - Coucher du soleil
-- **Isha** (عشاء) - Nuit
+### ð Horaires Disponibles
+- **Fajr** (ÙØ¬Ø±) - Aube
+- **Sunrise** (Ø´Ø±ÙÙ) - Lever du soleil
+- **Dhuhr** (Ø¸ÙØ±) - Midi
+- **Asr** (Ø¹ØµØ±) - AprÃ¨s-midi
+- **Maghrib** (ÙØºØ±Ø¨) - Coucher du soleil
+- **Isha** (Ø¹Ø´Ø§Ø¡) - Nuit
 
-### 🔔 Notifications Intelligentes
-- Rappels avant chaque prière (configurable)
-- Intégration WhatsApp/Telegram
-- Notifications système
+### ð Notifications Intelligentes
+- Rappels avant chaque priÃ¨re (configurable)
+- IntÃ©gration WhatsApp/Telegram
+- Notifications systÃ¨me
 - Cron jobs automatiques
 
-### 🧭 Direction Qibla
-- Calcul précis de la direction
+### ð§­ Direction Qibla
+- Calcul prÃ©cis de la direction
 - Distance de la Kaaba
-- Angle exact en degrés
+- Angle exact en degrÃ©s
 
-### 📅 Fonctionnalités Avancées
+### ð FonctionnalitÃ©s AvancÃ©es
 - Export calendrier (.ics)
 - Calendrier mensuel
 - Calendrier annuel
 - Cache offline
 - Support multi-langue (AR/FR/EN)
-- Ajustements manuels par prière
+- Ajustements manuels par priÃ¨re
 - Fuseau horaire automatique
 
-## 🚀 Installation
+## ð Installation
 
 ```bash
-# 1. Créer le dossier skill
+# 1. CrÃ©er le dossier skill
 mkdir -p ~/.openclaw/skills/salat-times
 cd ~/.openclaw/skills/salat-times
 
 # 2. Copier les fichiers du skill
 
-# 3. Installer dépendances
+# 3. Installer dÃ©pendances
 npm install
 ```
 
-## 📖 Utilisation
+## ð Utilisation
 
 ### Horaires Aujourd'hui (Auto-localisation)
 
@@ -97,21 +97,21 @@ salat-times
 
 **Sortie** :
 ```
-🕌 Horaires de Prière - Mardi 17 Février 2026
-📍 Paris, France (48.8566°N, 2.3522°E)
-⚙️  Méthode: Muslim World League
+ð Horaires de PriÃ¨re - Mardi 17 FÃ©vrier 2026
+ð Paris, France (48.8566Â°N, 2.3522Â°E)
+âï¸  MÃ©thode: Muslim World League
 
-🌅 Fajr    : 06:23  (dans 8h 15min)
-☀️  Sunrise : 07:52
-🕌 Dhuhr   : 13:42  ⬅️ PROCHAINE (dans 14h 34min)
-🌆 Asr     : 16:18
-🌙 Maghrib : 18:45
-🌃 Isha    : 20:15
+ð Fajr    : 06:23  (dans 8h 15min)
+âï¸  Sunrise : 07:52
+ð Dhuhr   : 13:42  â¬ï¸ PROCHAINE (dans 14h 34min)
+ð Asr     : 16:18
+ð Maghrib : 18:45
+ð Isha    : 20:15
 
-🧭 Qibla: 119° (ESE) - 3,287 km
+ð§­ Qibla: 119Â° (ESE) - 3,287 km
 ```
 
-### Prochaine Prière
+### Prochaine PriÃ¨re
 
 ```bash
 salat-times --next
@@ -119,11 +119,11 @@ salat-times --next
 
 **Sortie** :
 ```
-🕌 PROCHAINE PRIÈRE
+ð PROCHAINE PRIÃRE
 
-Dhuhr (ظهر)
-⏰ 13:42
-⏳ Dans 2 heures 34 minutes
+Dhuhr (Ø¸ÙØ±)
+â° 13:42
+â³ Dans 2 heures 34 minutes
 ```
 
 ### Localisation Manuelle
@@ -135,24 +135,24 @@ salat-times --city "Casablanca"
 # Par ville et pays
 salat-times --city "Lyon" --country "France"
 
-# Par coordonnées GPS
+# Par coordonnÃ©es GPS
 salat-times --lat 33.5731 --lon -7.5898
 
-# Adresse complète
-salat-times --address "Mosquée de Paris, France"
+# Adresse complÃ¨te
+salat-times --address "MosquÃ©e de Paris, France"
 ```
 
-### Changer Méthode de Calcul
+### Changer MÃ©thode de Calcul
 
 ```bash
-# Liste des méthodes
+# Liste des mÃ©thodes
 salat-times --methods
 
-# Utiliser une méthode spécifique
+# Utiliser une mÃ©thode spÃ©cifique
 salat-times --method "UOIF"          # Pour France
 salat-times --method "Karachi"       # Pour Pakistan
 salat-times --method "Turkey"        # Pour Turquie
-salat-times --method "MWL"           # Muslim World League (défaut)
+salat-times --method "MWL"           # Muslim World League (dÃ©faut)
 ```
 
 ### Calendrier Mensuel
@@ -161,7 +161,7 @@ salat-times --method "MWL"           # Muslim World League (défaut)
 # Mois courant
 salat-times --month
 
-# Mois spécifique
+# Mois spÃ©cifique
 salat-times --month 3 --year 2026
 
 # Export format calendrier
@@ -170,16 +170,16 @@ salat-times --month --export calendar.ics
 
 **Sortie** :
 ```
-🗓️  FÉVRIER 2026 - HORAIRES DE PRIÈRE
-📍 Paris, France
+ðï¸  FÃVRIER 2026 - HORAIRES DE PRIÃRE
+ð Paris, France
 
 Date       Fajr   Sunrise  Dhuhr   Asr     Maghrib  Isha
-─────────────────────────────────────────────────────────
-01 Fév     06:45  08:15    13:35   16:05   18:30    20:00
-02 Fév     06:44  08:14    13:36   16:06   18:31    20:01
-03 Fév     06:43  08:13    13:37   16:07   18:32    20:02
+âââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+01 FÃ©v     06:45  08:15    13:35   16:05   18:30    20:00
+02 FÃ©v     06:44  08:14    13:36   16:06   18:31    20:01
+03 FÃ©v     06:43  08:13    13:37   16:07   18:32    20:02
 ...
-28 Fév     06:10  07:40    13:48   16:25   18:50    20:25
+28 FÃ©v     06:10  07:40    13:48   16:25   18:50    20:25
 ```
 
 ### Direction Qibla
@@ -190,29 +190,29 @@ salat-times --qibla
 
 **Sortie** :
 ```
-🧭 DIRECTION QIBLA
+ð§­ DIRECTION QIBLA
 
-📍 Votre Position: Paris, France
-🕋 Kaaba: Makkah, Arabie Saoudite
+ð Votre Position: Paris, France
+ð Kaaba: Makkah, Arabie Saoudite
 
-Direction : 119.2° (ESE - Est-Sud-Est)
+Direction : 119.2Â° (ESE - Est-Sud-Est)
 Distance  : 3,287 km
-Azimut    : 119° 12' 34"
+Azimut    : 119Â° 12' 34"
 
 Orientation:
-    N (0°)
-    ↑
-W ← + → E
-    ↓
-    S (180°)
+    N (0Â°)
+    â
+W â + â E
+    â
+    S (180Â°)
 
-→ La Qibla est à 119° (légèrement vers l'est-sud-est)
+â La Qibla est Ã  119Â° (lÃ©gÃ¨rement vers l'est-sud-est)
 ```
 
 ### Notifications
 
 ```bash
-# Activer notifications (10 min avant chaque prière)
+# Activer notifications (10 min avant chaque priÃ¨re)
 salat-times --notify --before 10
 
 # Notifications via WhatsApp
@@ -228,7 +228,7 @@ salat-times --setup-cron
 ### Ajustements Manuels
 
 ```bash
-# Ajouter 2 minutes à Fajr
+# Ajouter 2 minutes Ã  Fajr
 salat-times --adjust fajr +2
 
 # Retirer 1 minute de Isha
@@ -237,7 +237,7 @@ salat-times --adjust isha -1
 # Voir ajustements actuels
 salat-times --adjustments
 
-# Réinitialiser ajustements
+# RÃ©initialiser ajustements
 salat-times --reset-adjustments
 ```
 
@@ -247,7 +247,7 @@ salat-times --reset-adjustments
 # Arabe
 salat-times --lang ar
 
-# Français (défaut)
+# FranÃ§ais (dÃ©faut)
 salat-times --lang fr
 
 # Anglais
@@ -264,7 +264,7 @@ salat-times --compact
 salat-times --json
 ```
 
-## ⚙️ Configuration
+## âï¸ Configuration
 
 ### Fichier de Configuration
 
@@ -304,40 +304,40 @@ Localisation : `~/.openclaw/skills/salat-times/config.json`
 ### Configuration via CLI
 
 ```bash
-# Définir localisation par défaut
+# DÃ©finir localisation par dÃ©faut
 salat-times config set location.city "Casablanca"
 salat-times config set location.country "Morocco"
 
-# Définir méthode par défaut
+# DÃ©finir mÃ©thode par dÃ©faut
 salat-times config set method "MWL"
 
-# Définir langue
+# DÃ©finir langue
 salat-times config set language "ar"
 
 # Voir configuration actuelle
 salat-times config show
 ```
 
-## 🔧 Méthodes de Calcul Détaillées
+## ð§ MÃ©thodes de Calcul DÃ©taillÃ©es
 
-| Code | Nom | Région | Fajr Angle | Isha Angle |
+| Code | Nom | RÃ©gion | Fajr Angle | Isha Angle |
 |------|-----|--------|------------|------------|
-| MWL | Muslim World League | Mondial | 18° | 17° |
-| ISNA | Islamic Society of North America | Amérique du Nord | 15° | 15° |
-| Egypt | Egyptian General Authority | Égypte | 19.5° | 17.5° |
-| Makkah | Umm Al-Qura, Makkah | Arabie Saoudite | 18.5° | 90 min |
-| Karachi | University of Islamic Sciences | Pakistan | 18° | 18° |
-| Tehran | Institute of Geophysics | Iran | 17.7° | 14° |
-| Jafari | Shia Ithna-Ashari | Chiite | 16° | 14° |
-| Gulf | Gulf Region | Golfe | 19.5° | 90 min |
-| Kuwait | Kuwait | Koweït | 18° | 17.5° |
-| Qatar | Qatar | Qatar | 18° | 90 min |
-| Singapore | Majlis Ugama Islam | Singapour | 20° | 18° |
-| UOIF | Union des Organisations Islamiques | France | 12° | 12° |
-| Turkey | Diyanet İşleri Başkanlığı | Turquie | 18° | 17° |
-| Russia | Spiritual Administration | Russie | 16° | 15° |
+| MWL | Muslim World League | Mondial | 18Â° | 17Â° |
+| ISNA | Islamic Society of North America | AmÃ©rique du Nord | 15Â° | 15Â° |
+| Egypt | Egyptian General Authority | Ãgypte | 19.5Â° | 17.5Â° |
+| Makkah | Umm Al-Qura, Makkah | Arabie Saoudite | 18.5Â° | 90 min |
+| Karachi | University of Islamic Sciences | Pakistan | 18Â° | 18Â° |
+| Tehran | Institute of Geophysics | Iran | 17.7Â° | 14Â° |
+| Jafari | Shia Ithna-Ashari | Chiite | 16Â° | 14Â° |
+| Gulf | Gulf Region | Golfe | 19.5Â° | 90 min |
+| Kuwait | Kuwait | KoweÃ¯t | 18Â° | 17.5Â° |
+| Qatar | Qatar | Qatar | 18Â° | 90 min |
+| Singapore | Majlis Ugama Islam | Singapour | 20Â° | 18Â° |
+| UOIF | Union des Organisations Islamiques | France | 12Â° | 12Â° |
+| Turkey | Diyanet Ä°Åleri BaÅkanlÄ±ÄÄ± | Turquie | 18Â° | 17Â° |
+| Russia | Spiritual Administration | Russie | 16Â° | 15Â° |
 
-## 📱 Intégrations
+## ð± IntÃ©grations
 
 ### Cron Job Automatique
 
@@ -345,14 +345,14 @@ salat-times config show
 # Installer cron job (notifications quotidiennes)
 salat-times --setup-cron
 
-# Désinstaller
+# DÃ©sinstaller
 salat-times --remove-cron
 ```
 
-Crée automatiquement un cron job OpenClaw qui :
-- Calcule horaires chaque jour à 4h du matin
-- Envoie notifications avant chaque prière
-- Met à jour le cache
+CrÃ©e automatiquement un cron job OpenClaw qui :
+- Calcule horaires chaque jour Ã  4h du matin
+- Envoie notifications avant chaque priÃ¨re
+- Met Ã  jour le cache
 
 ### WhatsApp
 
@@ -368,15 +368,15 @@ salat-times --daily --channel whatsapp --to "+33612345678" --time "05:00"
 salat-times --notify --channel telegram --to "@mehdi"
 ```
 
-## 🌐 API Utilisée
+## ð API UtilisÃ©e
 
 **Aladhan Prayer Times API**
 - URL: https://aladhan.com/prayer-times-api
 - Gratuit et open-source
-- Précision astronomique
+- PrÃ©cision astronomique
 - Couvre le monde entier
 
-## 🧪 Exemples d'Usage
+## ð§ª Exemples d'Usage
 
 ### Cas 1 : Setup Initial (France)
 
@@ -396,7 +396,7 @@ salat-times
 # Horaires temporaires pour Casablanca
 salat-times --city "Casablanca" --country "Morocco"
 
-# Changer méthode pour le Maroc
+# Changer mÃ©thode pour le Maroc
 salat-times --city "Casablanca" --method "MWL"
 ```
 
@@ -423,12 +423,12 @@ salat-times --city "London" --country "UK"
 salat-times --city "New York" --country "USA" --method "ISNA"
 ```
 
-## 🐛 Troubleshooting
+## ð Troubleshooting
 
-### Erreur de géolocalisation
+### Erreur de gÃ©olocalisation
 
 ```bash
-# Utiliser coordonnées manuelles
+# Utiliser coordonnÃ©es manuelles
 salat-times --lat 48.8566 --lon 2.3522
 ```
 
@@ -442,33 +442,33 @@ salat-times --clear-cache
 ### Horaires incorrects
 
 ```bash
-# Vérifier méthode de calcul
+# VÃ©rifier mÃ©thode de calcul
 salat-times --methods
 
-# Essayer une autre méthode
+# Essayer une autre mÃ©thode
 salat-times --method "Egypt"
 ```
 
-## 📚 Ressources
+## ð Ressources
 
 - [Aladhan API Documentation](https://aladhan.com/prayer-times-api)
-- [Méthodes de Calcul](https://aladhan.com/calculation-methods)
+- [MÃ©thodes de Calcul](https://aladhan.com/calculation-methods)
 - [IslamicFinder](https://www.islamicfinder.org/)
 
-## 🤝 Contribution
+## ð¤ Contribution
 
 Contributions bienvenues ! 
 
 GitHub: https://github.com/arabclaw/salat-times-secure
 
-## 📄 License
+## ð License
 
 MIT License
 
-## 👨‍💻 Auteur
+## ð¨âð» Auteur
 
-Créé par [@MDI](https://github.com/mdi) pour la communauté OpenClaw arabophone.
+CrÃ©Ã© par [@MDI](https://github.com/mdi) pour la communautÃ© OpenClaw arabophone.
 
 ---
 
-**🕌 Qu'Allah accepte vos prières | تقبل الله صلاتكم**
+**ð Qu'Allah accepte vos priÃ¨res | ØªÙØ¨Ù Ø§ÙÙÙ ØµÙØ§ØªÙÙ**
