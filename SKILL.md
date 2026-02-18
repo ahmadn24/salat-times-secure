@@ -1,0 +1,474 @@
+---
+name: salat-times
+description: Horaires de prière précis avec géolocalisation, toutes méthodes de calcul, notifications et direction Qibla
+homepage: https://github.com/arabclaw/salat-times-secure
+version: 1.0.0
+metadata:
+  openclaw:
+    emoji: "🕌"
+    tags: ["islamic", "prayer", "salat", "arabic", "muslim"]
+    requires:
+      bins: ["node"]
+      env: []
+    install:
+      - id: npm
+        kind: node
+        package: "axios moment-timezone moment-hijri"
+        bins: []
+        label: "Installer dépendances (npm)"
+---
+
+# 🕌 Salat Times - Horaires de Prière
+
+Le skill le plus complet pour les horaires de prière islamique avec géolocalisation automatique, toutes les méthodes de calcul, notifications intelligentes et direction Qibla.
+
+## ✨ Fonctionnalités
+
+### 🌍 Géolocalisation Automatique
+- Détection automatique de votre position
+- Support manuel par ville/pays/coordonnées
+- Cache de localisation
+
+### 📿 Méthodes de Calcul
+Support de **12 écoles juridiques** :
+- Muslim World League (MWL)
+- Islamic Society of North America (ISNA)
+- Egyptian General Authority of Survey
+- Umm Al-Qura University, Makkah
+- University of Islamic Sciences, Karachi
+- Institute of Geophysics, University of Tehran
+- Shia Ithna-Ashari, Leva Institute, Qum
+- Gulf Region
+- Kuwait
+- Qatar
+- Majlis Ugama Islam Singapura, Singapore
+- Union Organization Islamic de France (UOIF)
+- Diyanet İşleri Başkanlığı, Turkey
+- Spiritual Administration of Muslims of Russia
+
+### 🕐 Horaires Disponibles
+- **Fajr** (فجر) - Aube
+- **Sunrise** (شروق) - Lever du soleil
+- **Dhuhr** (ظهر) - Midi
+- **Asr** (عصر) - Après-midi
+- **Maghrib** (مغرب) - Coucher du soleil
+- **Isha** (عشاء) - Nuit
+
+### 🔔 Notifications Intelligentes
+- Rappels avant chaque prière (configurable)
+- Intégration WhatsApp/Telegram
+- Notifications système
+- Cron jobs automatiques
+
+### 🧭 Direction Qibla
+- Calcul précis de la direction
+- Distance de la Kaaba
+- Angle exact en degrés
+
+### 📅 Fonctionnalités Avancées
+- Export calendrier (.ics)
+- Calendrier mensuel
+- Calendrier annuel
+- Cache offline
+- Support multi-langue (AR/FR/EN)
+- Ajustements manuels par prière
+- Fuseau horaire automatique
+
+## 🚀 Installation
+
+```bash
+# 1. Créer le dossier skill
+mkdir -p ~/.openclaw/skills/salat-times
+cd ~/.openclaw/skills/salat-times
+
+# 2. Copier les fichiers du skill
+
+# 3. Installer dépendances
+npm install
+```
+
+## 📖 Utilisation
+
+### Horaires Aujourd'hui (Auto-localisation)
+
+```bash
+salat-times
+```
+
+**Sortie** :
+```
+🕌 Horaires de Prière - Mardi 17 Février 2026
+📍 Paris, France (48.8566°N, 2.3522°E)
+⚙️  Méthode: Muslim World League
+
+🌅 Fajr    : 06:23  (dans 8h 15min)
+☀️  Sunrise : 07:52
+🕌 Dhuhr   : 13:42  ⬅️ PROCHAINE (dans 14h 34min)
+🌆 Asr     : 16:18
+🌙 Maghrib : 18:45
+🌃 Isha    : 20:15
+
+🧭 Qibla: 119° (ESE) - 3,287 km
+```
+
+### Prochaine Prière
+
+```bash
+salat-times --next
+```
+
+**Sortie** :
+```
+🕌 PROCHAINE PRIÈRE
+
+Dhuhr (ظهر)
+⏰ 13:42
+⏳ Dans 2 heures 34 minutes
+```
+
+### Localisation Manuelle
+
+```bash
+# Par ville
+salat-times --city "Casablanca"
+
+# Par ville et pays
+salat-times --city "Lyon" --country "France"
+
+# Par coordonnées GPS
+salat-times --lat 33.5731 --lon -7.5898
+
+# Adresse complète
+salat-times --address "Mosquée de Paris, France"
+```
+
+### Changer Méthode de Calcul
+
+```bash
+# Liste des méthodes
+salat-times --methods
+
+# Utiliser une méthode spécifique
+salat-times --method "UOIF"          # Pour France
+salat-times --method "Karachi"       # Pour Pakistan
+salat-times --method "Turkey"        # Pour Turquie
+salat-times --method "MWL"           # Muslim World League (défaut)
+```
+
+### Calendrier Mensuel
+
+```bash
+# Mois courant
+salat-times --month
+
+# Mois spécifique
+salat-times --month 3 --year 2026
+
+# Export format calendrier
+salat-times --month --export calendar.ics
+```
+
+**Sortie** :
+```
+🗓️  FÉVRIER 2026 - HORAIRES DE PRIÈRE
+📍 Paris, France
+
+Date       Fajr   Sunrise  Dhuhr   Asr     Maghrib  Isha
+─────────────────────────────────────────────────────────
+01 Fév     06:45  08:15    13:35   16:05   18:30    20:00
+02 Fév     06:44  08:14    13:36   16:06   18:31    20:01
+03 Fév     06:43  08:13    13:37   16:07   18:32    20:02
+...
+28 Fév     06:10  07:40    13:48   16:25   18:50    20:25
+```
+
+### Direction Qibla
+
+```bash
+salat-times --qibla
+```
+
+**Sortie** :
+```
+🧭 DIRECTION QIBLA
+
+📍 Votre Position: Paris, France
+🕋 Kaaba: Makkah, Arabie Saoudite
+
+Direction : 119.2° (ESE - Est-Sud-Est)
+Distance  : 3,287 km
+Azimut    : 119° 12' 34"
+
+Orientation:
+    N (0°)
+    ↑
+W ← + → E
+    ↓
+    S (180°)
+
+→ La Qibla est à 119° (légèrement vers l'est-sud-est)
+```
+
+### Notifications
+
+```bash
+# Activer notifications (10 min avant chaque prière)
+salat-times --notify --before 10
+
+# Notifications via WhatsApp
+salat-times --notify --channel whatsapp --to "+33612345678"
+
+# Notifications via Telegram
+salat-times --notify --channel telegram --to "@mehdi"
+
+# Configurer cron job (notifications automatiques)
+salat-times --setup-cron
+```
+
+### Ajustements Manuels
+
+```bash
+# Ajouter 2 minutes à Fajr
+salat-times --adjust fajr +2
+
+# Retirer 1 minute de Isha
+salat-times --adjust isha -1
+
+# Voir ajustements actuels
+salat-times --adjustments
+
+# Réinitialiser ajustements
+salat-times --reset-adjustments
+```
+
+### Options de Langue
+
+```bash
+# Arabe
+salat-times --lang ar
+
+# Français (défaut)
+salat-times --lang fr
+
+# Anglais
+salat-times --lang en
+```
+
+### Mode Compact
+
+```bash
+# Format court
+salat-times --compact
+
+# Format JSON (pour scripting)
+salat-times --json
+```
+
+## ⚙️ Configuration
+
+### Fichier de Configuration
+
+Localisation : `~/.openclaw/skills/salat-times/config.json`
+
+```json
+{
+  "location": {
+    "city": "Paris",
+    "country": "France",
+    "latitude": 48.8566,
+    "longitude": 2.3522,
+    "timezone": "Europe/Paris"
+  },
+  "method": "UOIF",
+  "language": "fr",
+  "adjustments": {
+    "fajr": 0,
+    "dhuhr": 0,
+    "asr": 0,
+    "maghrib": 0,
+    "isha": 0
+  },
+  "notifications": {
+    "enabled": true,
+    "before_minutes": 10,
+    "channel": "whatsapp",
+    "recipient": "+33612345678"
+  },
+  "cache": {
+    "enabled": true,
+    "duration_hours": 24
+  }
+}
+```
+
+### Configuration via CLI
+
+```bash
+# Définir localisation par défaut
+salat-times config set location.city "Casablanca"
+salat-times config set location.country "Morocco"
+
+# Définir méthode par défaut
+salat-times config set method "MWL"
+
+# Définir langue
+salat-times config set language "ar"
+
+# Voir configuration actuelle
+salat-times config show
+```
+
+## 🔧 Méthodes de Calcul Détaillées
+
+| Code | Nom | Région | Fajr Angle | Isha Angle |
+|------|-----|--------|------------|------------|
+| MWL | Muslim World League | Mondial | 18° | 17° |
+| ISNA | Islamic Society of North America | Amérique du Nord | 15° | 15° |
+| Egypt | Egyptian General Authority | Égypte | 19.5° | 17.5° |
+| Makkah | Umm Al-Qura, Makkah | Arabie Saoudite | 18.5° | 90 min |
+| Karachi | University of Islamic Sciences | Pakistan | 18° | 18° |
+| Tehran | Institute of Geophysics | Iran | 17.7° | 14° |
+| Jafari | Shia Ithna-Ashari | Chiite | 16° | 14° |
+| Gulf | Gulf Region | Golfe | 19.5° | 90 min |
+| Kuwait | Kuwait | Koweït | 18° | 17.5° |
+| Qatar | Qatar | Qatar | 18° | 90 min |
+| Singapore | Majlis Ugama Islam | Singapour | 20° | 18° |
+| UOIF | Union des Organisations Islamiques | France | 12° | 12° |
+| Turkey | Diyanet İşleri Başkanlığı | Turquie | 18° | 17° |
+| Russia | Spiritual Administration | Russie | 16° | 15° |
+
+## 📱 Intégrations
+
+### Cron Job Automatique
+
+```bash
+# Installer cron job (notifications quotidiennes)
+salat-times --setup-cron
+
+# Désinstaller
+salat-times --remove-cron
+```
+
+Crée automatiquement un cron job OpenClaw qui :
+- Calcule horaires chaque jour à 4h du matin
+- Envoie notifications avant chaque prière
+- Met à jour le cache
+
+### WhatsApp
+
+```bash
+# Recevoir horaires quotidiens par WhatsApp
+salat-times --daily --channel whatsapp --to "+33612345678" --time "05:00"
+```
+
+### Telegram
+
+```bash
+# Recevoir notifications Telegram
+salat-times --notify --channel telegram --to "@mehdi"
+```
+
+## 🌐 API Utilisée
+
+**Aladhan Prayer Times API**
+- URL: https://aladhan.com/prayer-times-api
+- Gratuit et open-source
+- Précision astronomique
+- Couvre le monde entier
+
+## 🧪 Exemples d'Usage
+
+### Cas 1 : Setup Initial (France)
+
+```bash
+# Configuration initiale
+salat-times config set location.city "Lyon"
+salat-times config set method "UOIF"
+salat-times config set language "fr"
+
+# Horaires du jour
+salat-times
+```
+
+### Cas 2 : Voyage (Maroc)
+
+```bash
+# Horaires temporaires pour Casablanca
+salat-times --city "Casablanca" --country "Morocco"
+
+# Changer méthode pour le Maroc
+salat-times --city "Casablanca" --method "MWL"
+```
+
+### Cas 3 : Notifications Ramadan
+
+```bash
+# Activer notifications 15 min avant
+salat-times --notify --before 15 --channel whatsapp
+
+# Calendrier complet du mois
+salat-times --month
+```
+
+### Cas 4 : Plusieurs Villes
+
+```bash
+# Paris
+salat-times --city "Paris"
+
+# Londres
+salat-times --city "London" --country "UK"
+
+# New York
+salat-times --city "New York" --country "USA" --method "ISNA"
+```
+
+## 🐛 Troubleshooting
+
+### Erreur de géolocalisation
+
+```bash
+# Utiliser coordonnées manuelles
+salat-times --lat 48.8566 --lon 2.3522
+```
+
+### Cache corrompu
+
+```bash
+# Nettoyer cache
+salat-times --clear-cache
+```
+
+### Horaires incorrects
+
+```bash
+# Vérifier méthode de calcul
+salat-times --methods
+
+# Essayer une autre méthode
+salat-times --method "Egypt"
+```
+
+## 📚 Ressources
+
+- [Aladhan API Documentation](https://aladhan.com/prayer-times-api)
+- [Méthodes de Calcul](https://aladhan.com/calculation-methods)
+- [IslamicFinder](https://www.islamicfinder.org/)
+
+## 🤝 Contribution
+
+Contributions bienvenues ! 
+
+GitHub: https://github.com/arabclaw/salat-times-secure
+
+## 📄 License
+
+MIT License
+
+## 👨‍💻 Auteur
+
+Créé par [@MDI](https://github.com/mdi) pour la communauté OpenClaw arabophone.
+
+---
+
+**🕌 Qu'Allah accepte vos prières | تقبل الله صلاتكم**
